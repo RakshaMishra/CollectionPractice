@@ -1,0 +1,96 @@
+package com.kodnest.collection;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class MyQueu
+{
+	ArrayList<Integer> al = new ArrayList<Integer>();
+	void enqueu(int el)
+	{
+		al.add(el);
+		System.out.println(al+"push success");
+	}
+	void dequeu()
+	{  if(al.size()==0)
+	{
+		System.out.println("stack is empty");
+	}
+	else
+	{
+		int rem=al.remove(0);
+		System.out.println(rem +"is removed");
+		
+			
+			
+	}
+	}
+	void peek()
+	{
+		if(al.isEmpty())
+		{
+			System.out.println("stack is empty");
+		}
+		else {
+		System.out.println(al.get(0)+"peek");
+	}
+	}
+	void display()
+	{ if(al.size()==0)
+	{
+		System.out.println("stack is empty");
+	}
+	else {
+		System.out.println(al);
+	}
+	}
+}
+
+
+public class Queu {
+	public static void main(String[] args) {
+		
+	
+	
+	MyQueu s=new MyQueu();
+	
+	Scanner sc=new Scanner(System.in);
+	
+	
+	while(true)
+	{
+		System.out.println("enter 1 for push");
+		System.out.println("enter 2 for pop");
+		System.out.println("enter 3  for peek");
+		System.out.println("enter 4  for displaying the element");
+		System.out.println("enter 5  for exit");
+	
+	int b=sc.nextInt();
+	switch(b)
+ {case 1:
+	   System.out.println("enter the elementt to be pushed");
+	   int el=sc.nextInt();
+		  s.enqueu(el);
+		  break;
+	case 2:
+		s.dequeu();
+		break;
+	case 3:
+		s.peek();
+		break;
+	case 4:
+		s.display();
+		break;
+	case 5:
+		System.exit(0);
+		break;
+	default:
+		System.out.println("enter the valid no");
+		  
+	
+	}
+	}
+	
+
+	}
+}
